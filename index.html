@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Wishes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .page {
+            display: none;
+            height: 100vh;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+        }
+        #home {
+            background-image: url(Covenant.jpg);
+        }
+        #christmas {
+            background-image: url('Paean_4.jpg');
+        }
+        #newyear {
+            background-image: url('Paean_3.jpg'); 
+        }
+        h1 {
+            font-size: 3em;
+            margin: 100px 0;
+            font-weight: bolder;
+        }
+        .h1a{
+           color: gold; 
+        }
+        .h1b{
+            color: white;
+        }
+        p {
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
+        .p1{
+            color: gold;
+        }
+        blockquote{
+            color: white;
+        }
+        .p2{
+            color: white;
+        }
+        .p3{
+            color: blue;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+        }
+        nav button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: black;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            margin-right: 10px;
+            align-content: center;
+        }
+        
+button:hover {
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    opacity: 0.8;
+}
+nav :hover {
+    text-decoration: none;
+    color: black; 
+}
+
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+        window.onload = function() {
+            showPage('home'); // Show the home page on load
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('christmas')">Christmas Message</button>
+        <button onclick="showPage('newyear')">New Year Message</button>
+    </nav>
+    
+    <div id="home" class="page">
+        <h1 class="h1b">Cheers to Happy Holidays!</h1>
+        <p class="p3">Hurray!!!<br> All is well  that ends well, it's once again that time to celebrate, reflect back,<br>
+            thank God and anticipate for a more glorious future ahead. 2024 has been a wonderful year.</p>
+        <p class="p2"><small>Click on the buttons above to view our messages.</small></p>
+    </div>
+    
+    <div id="christmas" class="page">
+        <h1>Merry Christmas!</h1>
+        <p><blockquote><strong>"May this Christmas season bring you joy and warmth, just as you have brought light into my life.
+             Your generosity and guidance have been a true gift, transforming not only my journey but also that of my family.
+              Thank you for believing in me. Wishing you a holiday filled with love and happiness."</strong>
+        </blockquote></p>
+    </div>
+    
+    <div id="newyear" class="page">
+        <h1 class="h1a">Happy New Year 2025!</h1>
+        <p class="p1"><blockquote><strong>"As we step into a new year, I want to express my heartfelt gratitude for the incredible impact you've had on my life.
+             Your support and encouragement have opened doors I never thought possible. Here's to a year filled with new opportunities and continued growth. 
+             Happy New Year to someone truly special!"</strong></blockquote></p>
+    </div>
+</body>
+</html>
