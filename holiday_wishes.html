@@ -8,14 +8,13 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
         }
         .page {
             display: none;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height to min-height */
             color: white;
             text-align: center;
-            padding: 40px;
+            padding: 20px; /* Adjusted padding */
             background-size: cover;
             background-position: center;
         }
@@ -29,65 +28,73 @@
             background-image: url('Paean_3.jpg'); 
         }
         h1 {
-            font-size: 3em;
-            margin: 100px 0;
+            font-size: 2.5rem; /* Changed from 3em to rem */
+            margin: 50px 0; /* Adjusted margin */
             font-weight: bolder;
         }
-        .h1a{
-           color: gold; 
+        .h1a {
+            color: gold; 
         }
-        .h1b{
+        .h1b {
             color: red;
         }
         p {
-            font-size: 1.5em;
+            font-size: 1.2rem; /* Changed from 1.5em to rem */
             font-weight: bolder;
         }
-        .p1{
+        .p1 {
             color: gold;
         }
-        blockquote{
+        blockquote {
             color: white;
         }
-        .p2{
+        .p2 {
             color: red;
         }
-        .p3{
+        .p3 {
             color: blue;
         }
         nav {
             display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap */
             justify-content: center;
             gap: 10px;
             position: absolute;
-            top: 20px;
+            top: 5px;
             width: 100%;
         }
         nav button {
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 15px 25px; /* Increased padding for better tap area */
+            font-size: 1rem; /* Responsive font size */
             cursor: pointer;
             background-color: black;
             border: none;
             color: #fff;
             border-radius: 5px;
-            margin-right: 10px;
-            align-content: center;
         }
-        
-button:hover {
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-button:active {
-    opacity: 0.8;
-}
-nav :hover {
-    text-decoration: none;
-    color: black; 
-}
-
+        button:hover {
+            background-color: white;
+            color: black; /* Change text color on hover */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            opacity: 0.8;
+        }
+        nav :hover {
+            text-decoration: none;
+            color: black; 
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Adjust for smaller screens */
+            }
+            p {
+                font-size: 1rem; /* Adjust for smaller screens */
+            }
+            nav button {
+                padding: 10px 15px; /* Adjust button padding for smaller screens */
+            }
+        }
     </style>
     <script>
         function showPage(pageId) {
@@ -111,7 +118,7 @@ nav :hover {
     
     <div id="home" class="page">
         <h1 class="h1b">Cheers to Happy Holidays!</h1>
-        <p class="p3">Hurray!!! All is well  that ends well, it's once again that time to celebrate,<br> reflect back,
+        <p class="p3">Hurray!!! All is well that ends well, it's once again that time to celebrate,<br> reflect back,
             thank God and anticipate for a more glorious future ahead. 2024 has been a wonderful year.</p>
         <p class="p2"><small>Click on the buttons above to view our messages.</small></p>
     </div>
